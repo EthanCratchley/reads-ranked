@@ -1,0 +1,51 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+  }
+  .header .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .header button {
+    padding: 10px 20px;
+    margin-left: 10px;
+  }
+  .video-banner {
+    position: relative;
+    width: 100%;
+    height: calc(100vh * 2 / 3);
+    overflow: hidden;
+  }
+  .video-banner video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .video-banner h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3em;
+    text-align: center;
+  }
+  .book-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  .book {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
