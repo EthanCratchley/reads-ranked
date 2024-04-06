@@ -1,22 +1,42 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: Merriweather, sans-serif;
+  }
+  .header .logo a, .header .logo a:visited {
+    text-decoration: none; /* Removes underline */
+    color: white; /* Keeps the font color the same even after being clicked */
+    outline: none; /* Removes the outline when focused (clicked) */
+    cursor: pointer; /* Changes the cursor to a pointer on hover over buttons */
+    pointer-events: auto; /* Ensures the logo is clickable */
   }
   .header {
+    z-index: 100; /* Increase z-index */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #f8f8f8;
+    padding: 10px;
+    padding-right: 20px; /* Adjust the right padding to prevent content from touching the screen edge */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to text */
   }
   .header .logo {
     font-size: 24px;
     font-weight: bold;
   }
-  .header button {
-    padding: 10px 20px;
-    margin-left: 10px;
+  .header button, .book {
+    white-space: nowrap; /* Prevents text from wrapping */
+    margin-right: 20px; /* Adds margin to the right of the buttons, adjust as needed */
+    padding: 10px 15px; /* Adjust padding to ensure content fits, reduce if necessary */    margin-left: 10px;
+    border-radius: 10px; /* Rounded corners for buttons and book divs */
+    border: none; /* Optional: Removes default border from buttons */
+    background-color: #ffffff; /* Optional: Adds background color to buttons */
+    color: rgb(0, 0, 0); /* Optional: Changes text color to white for buttons */
+    cursor: pointer; /* Changes the cursor to a pointer on hover over buttons */
+    outline: none; /* Removes the outline on focus for buttons */
   }
   .video-banner {
     position: relative;
@@ -37,6 +57,7 @@ body, html {
     color: white;
     font-size: 3em;
     text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to text */
   }
   .book-list {
     display: grid;
