@@ -1,6 +1,7 @@
 body, html {
     margin: 0;
     padding: 0;
+    background-color: antiquewhite;
     font-family: Merriweather, sans-serif;
   }
   .header .logo a, .header .logo a:visited {
@@ -70,4 +71,15 @@ body, html {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
+  }
+  .filter{
+    margin: 20px;
+    border-radius: 10px; 
+    padding: 15px 20px;
+    white-space: nowrap; 
+    border: none; 
+    background-color: #ffffff; 
+    color: rgb(0, 0, 0); 
+    cursor: pointer; 
+    outline: none; 
   }
