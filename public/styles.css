@@ -1,12 +1,12 @@
 body, html {
     margin: 0;
     padding: 0;
-    background-color: antiquewhite;
+    background-color: #f4e7d3; 
     font-family: Merriweather, sans-serif;
   }
   .header .logo a, .header .logo a:visited {
     text-decoration: none; 
-    color: white; 
+    color: #5a4a42;
     outline: none; 
     cursor: pointer; 
     pointer-events: auto; 
@@ -23,6 +23,8 @@ body, html {
     padding: 10px;
     padding-right: 20px; 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    background-color: #e8d9c0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
   .header .logo {
     font-size: 24px;
@@ -35,11 +37,15 @@ body, html {
     margin-left: 10px;
     border-radius: 10px; 
     border: none; 
-    background-color: #ffffff; 
-    color: rgb(0, 0, 0); 
+    background-color: #decba4;
+    color: #5a4a42; 
     cursor: pointer; 
     outline: none; 
+    transition: background-color 0.3s ease;
   }
+  .header button:hover, .book:hover, .filter:hover {
+    background-color: #d1b892; 
+}
   .video-banner {
     position: relative;
     width: 100%;
@@ -71,15 +77,45 @@ body, html {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
+    background-color: #efe1d6;
   }
   .filter{
     margin: 20px;
     border-radius: 10px; 
-    padding: 15px 20px;
+    padding: 15px 20px; 
     white-space: nowrap; 
     border: none; 
-    background-color: #ffffff; 
-    color: rgb(0, 0, 0); 
+    background-color: #efe1d6;
+    color: #5a4a42; 
     cursor: pointer; 
     outline: none; 
   }
+  .search {
+    margin-right: 10px; 
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    border-radius: 28px;
+    background-color: #efe1d6;
+    margin-top: 20px; 
+    transition: background 0.25s;
+}
+
+.search-icon {
+    color: white; 
+    padding: 0 var(--padding); 
+}
+
+.search-input {
+    flex-grow: 1;
+    font-size: 16px;
+    color: #5a4a42; 
+    outline: none;
+    border: none;
+    background: transparent;
+}
+.list-header {
+  display: flex;
+  padding: 10px; 
+}

@@ -8,7 +8,7 @@ const axios = require('axios');
 
 // Initializing Express App and Connecting to MongoDB
 const app = express();
-const port = 3000;
+const port = 3001;
 
 mongoose.connect(process.env.MONGODB_URI)
     .then(() => console.log('MongoDB connected successfully'))

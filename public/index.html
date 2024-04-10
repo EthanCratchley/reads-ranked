@@ -7,6 +7,7 @@
     <title>Reads Ranked</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -29,6 +30,12 @@
       </div>
 
       <div class="list-header">
+        <form id="search-form">
+          <div class="search">
+            <span class="search-icon material-symbols-outlined">search</span>
+            <input class="search-input" type="search" id="location-input" placeholder="Search">
+        </div>
+      </form>
         <button class="filter">Filter</button>
       </div>
       <div class="book-list">
@@ -41,5 +48,6 @@
         </div>
         <!-- Repeat for each book -->
       </div>
+      <script src="./search.js"></script>
 </body>
 </html>
