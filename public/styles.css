@@ -69,6 +69,8 @@ body, html {
   }
   .book-list {
     display: grid;
+    flex-wrap: wrap;
+    justify-content: start;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;

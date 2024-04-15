@@ -18,42 +18,21 @@ mongoose.connect(process.env.MONGODB_URI)
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
-// API Endpoints
-// Get list of Books
-app.get('/api/books', async (req, res) => {
-    try{
-        const books = await Book.find({});
-        res.json(books);
-    } catch (erro) {
-        console.error('Failed to fetch books', error);
-        res.status(500).json({message: 'Failed to fetch books'});
-    }
-});
-
-// Add a new book
-app.post('/api/books', async (req, res) => {
-    try {
-        const newBook = new Book(req.body);
-        const savedBook = await newBook.save();
-        res.json(savedBook);
-    } catch (error) {
-        console.error('Failed to save book:', error);
-        res.status(500).json({ message: 'Failed to save book' });
-    }
-});
-
 // Search books using Google Books API
 app.get('/search/books', async (req, res) => {
-    const query = req.query.q;
+    const query = req.query.q; // Extract the search query from the request query parameters
     if (!query) {
-        return res.status(400).json({ message: 'Search query is required.' });
+        return res.status(400).json({ message: 'Search query is required.' }); // Validate query presence
     }
-  
+
     try {
+        // Make a GET request to Google Books API with the search query
         const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${query}&key=${process.env.GOOGLE_BOOKS_API_KEY}`);
+        // Send the array of books in the response or an empty array if none
         res.json(response.data.items || []);
     } catch (error) {
         console.error('Error fetching books from Google Books API:', error);
+        // Respond with a server error status code and message
         res.status(500).json({ message: 'Failed to fetch books from Google Books' });
     }
 });
